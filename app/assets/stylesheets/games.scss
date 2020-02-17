@@ -15,3 +15,23 @@ h1 {
   margin: 0 auto;
   width: 80%;
 }
+
+.board {
+  display: flex;
+  justify-content: space-between;
+  .board-letter {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #35519A;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgb(150,150,150);
+    background: #5170C1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 0 0;
+    }
+  }
+}
