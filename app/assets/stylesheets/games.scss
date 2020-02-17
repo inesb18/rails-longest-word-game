@@ -8,6 +8,7 @@ $gray: rgb(100,100,100);
 h1 {
   color: $gray;
   text-align: center;
+  margin: 20px 0;
 }
 
 .container {
@@ -19,6 +20,7 @@ h1 {
 .board {
   display: flex;
   justify-content: space-between;
+  margin: 30px 0;
   .board-letter {
     width: 40px;
     height: 40px;
@@ -34,4 +36,9 @@ h1 {
       margin: 0 0;
     }
   }
+}
+
+.input p {
+  color: $gray;
+  margin-bottom: 6px;
 }

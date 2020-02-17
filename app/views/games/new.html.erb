@@ -7,3 +7,14 @@
   <% end %>
 </div>
 
+<div class="input">
+  <p> What is the longest word you can find? </p>
+  <form class="form-group d-flex" action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters_as_string, @letters %>
+    <%= hidden_field_tag :start_time, Time.now %>
+    <input class="form-control" type="text" name="word">
+    <input class="btn btn-success" type="submit" value="Play">
+  </form>
+</div>
+

@@ -5,5 +5,6 @@ class GamesController < ApplicationController
   end
 
   def score
+    binding.pry
   end
 end
