@@ -1,2 +1,17 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<% elapsed_time = Time.now - @start_time.to_time %>
+
+
+<h2>Result</h2>
+
+<p>
+
+  <% if !@existing %>
+    Sorry but <strong> <%= @word.upcase %> </strong> does not seem to be a valid English word...
+  <% elsif !@in_the_grid %>
+    Sorry but <strong> <%= @word.upcase %> </strong> can't be built out of <%= @letters.join(", ") %>.
+  <% else %>
+    <strong>Congratulations!</strong> <%= @word.upcase %> is a valid English word. Score : <%= @word.length * 100 / (elapsed_time).to_i %>.
+  <% end %>
+</p>
+
+<%= link_to "Play again", new_path %>
