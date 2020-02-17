@@ -2,6 +2,11 @@ require 'open-uri'
 require 'json'
 
 class GamesController < ApplicationController
+  def reset
+    reset_session
+    redirect_to new_path
+  end
+
   def new
     @letters = generate_grid(10)
   end
